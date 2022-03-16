@@ -1,9 +1,10 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "xml.h"
+#include "xml.c/src/xml.h"
+#include "parser.h"
 
-int main() {
+int readfile() {
     FILE * stream;
     stream = fopen("file.xml", "r");
     struct xml_document* document = xml_open_document(stream);

@@ -1,5 +1,7 @@
 #include "tigr/tigr.h"
 
+#include "parser.h"
+
 #include <math.h>
 
 #include <stdio.h>
@@ -10,6 +12,8 @@ Tigr *backdrop, *screen;
 
 int main(int argc, char *argv[])
 {
+    readfile();
+    
     // Load our sprite.
 
     Tigr *trash = tigrLoadImage("./icons/trash.png");
@@ -73,9 +77,6 @@ int main(int argc, char *argv[])
         
         //dibuja audio
         tigrBlitAlpha(screen, audio, 224, 64, 0, 0, audio->w, audio->h, 1.0f);
-
-        //dibuja el texto
-        tigrPrint(screen, tfont, 120, 110, tigrRGB(0x00, 0x00, 0x00), "Hello, world.");
 
         // Update the window.
         tigrUpdate(screen);

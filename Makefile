@@ -10,11 +10,15 @@ else
         endif
 endif
 
-icono: icono.o tigr.o
-	gcc -o icono icono.o tigr.o $(CFLAGS) $(LDFLAGS)
+icono: icono.o tigr.o parser.o xml.o
+	gcc -o icono icono.o tigr.o parser.o xml.o $(CFLAGS) $(LDFLAGS)
+parser.o: parser.c
+	gcc -c parser.c
 icono.o: icono.c
 	gcc -c icono.c
 tigr.o: tigr\tigr.c tigr\tigr.h
 	gcc -c tigr\tigr.c
+xml.o: xml.c\src\xml.c
+	gcc -c xml.c/src/xml.c
 clean:
 	del icono icono.o icono.o
