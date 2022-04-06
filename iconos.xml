@@ -1,0 +1,9 @@
+<Root>
+    <icon x=3, y=2 text="audio">audio</icon>
+    <icon x=4, y=2>calculator</icon>
+    <icon x=5, y=2 text="internet">internet</icon>
+    <icon x=6, y=2>notepad</icon>
+    <icon x=7, y=2 text="setup">setup</icon>
+     <icon x=2, y=2>terminal</icon>
+    <icon x=1, y=2 text="trash">trash</icon>
+</Root>
